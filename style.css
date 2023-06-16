@@ -47,7 +47,7 @@ header {
 /* sign-in and sign-up */
 .sign-grid-main{
   display: grid;
-  grid-template-columns: 10vw 28rem auto;
+  grid-template-columns: 10vw 23rem auto;
   grid-template-rows: 10vh 20vh 40vh 100px;
   row-gap: 3;
   gap: 20px;
@@ -56,6 +56,20 @@ header {
   background-size: cover;
   background-position-y: bottom;
 }
+
+.sign-header {
+  grid-column: 3;
+  text-align: center;
+  margin: 50px;
+  font-size: xx-large;
+  color: whitesmoke;
+}
+
+.sign-header > h1 {
+  text-shadow: -3px 6px black;
+  margin-bottom: 20px;
+}
+
 .sign-grid {
   grid-column: 2;
   grid-row: 3;
@@ -96,14 +110,7 @@ header {
   transform: translateY(15px);
 }
 
-.sign-img {
-  grid-column: 2;
-  grid-row: 2;
-  max-width: 100%;
-  height: auto;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
+
 .sign-alt {
   margin: 0 auto;
 }
@@ -120,7 +127,14 @@ header {
   border: 1px solid grey;
   border-radius: 50%;
 }
-
+.sign-img {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
 /* footer */
 .footer {
   border-top: 2px solid black;
