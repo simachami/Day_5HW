@@ -31,7 +31,7 @@ html {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 } */
 
-
+/* nav bar */
 nav{
     display: flex;
     justify-content: center;
@@ -61,6 +61,7 @@ nav{
     font-size: 1rem;
     font-weight: 600;
 }
+
   .sign-in-btn{
     background-color: white;
     text-align: center;
@@ -75,6 +76,7 @@ nav{
     font-size: 1rem;
     
 }
+
   .free-btn{
     background-color: blue;
     color: white;
@@ -86,18 +88,17 @@ nav{
     font-size: 1rem;
   } 
 
+/* hero opener for main page and how-it-works */
 .grid-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(1,1fr);
     gap: 10px;
+    margin-top: 20px;
 }
-
-
 
 .top-landing {
     padding:50px;
-   
 }
 
 .top-landing h1{
@@ -171,50 +172,70 @@ p a:hover{
     font-size: 12px;
     font-weight: bold;
     width: 1em;
-    
+
 }
 
 ul li{
-     display: inline-block;
+    display: inline-block;
     padding: 0.25rem;
     font-size: 12px;
     margin-top: 0.25rem;
 }
 
-.aside{
-    background-color: gray;
-    
-}
-
-.side-circles{
+/* bubbles on header */
+.aside-bubbles{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(3, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+    gap: 1rem;
 }
 
-.circle{
+.bubbles-all{
 background-color: blue;
-width: 150px;
-height: 100px;
-border-radius: 20%;
-display: inline-block;
-margin-right: 10px;
-margin-top: 1rem;
-position: relative;
-
+width: 100%;
+height: 100%;
+text-align: center;
+padding-top: 3rem;
+box-shadow: 1px 1px 10px 1px gray;
+color: white;
+font-weight: 600;
 }
 
-.circle p{
-    text-align: center;
-    line-height: 100px;
-    color: white;
-    font-size: 16px;
-   
-  }
-
-.circle:nth-of-type(2n - 1){
+.bubbles-all:nth-of-type(3n - 1){
     background-color: lightgray;
 }
+/* each bubble-border */
+.bubble-1 {
+  border-top-left-radius: 50%;
+}
+.bubble-2 {
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.bubble-3 {
+  border-top-right-radius: 50%;
+}
+.bubble-4 {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.bubble-5 {
+  border-radius: 50%;
+}
+.bubble-6 {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.bubble-7 {
+  border-bottom-left-radius: 50%;
+}.bubble-8 {
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.bubble-9 {
+  border-bottom-right-radius: 50%;
+}
+
 
 .lil-border{
     border-bottom: 2px solid lightgray;
