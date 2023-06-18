@@ -241,8 +241,10 @@ p a:hover {
 
 .lil-border {
     border: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 50px 300px 0 300px;
+    margin: 100px 300px 0 300px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
 }
@@ -276,12 +278,6 @@ p a:hover {
 
 }
 
-ul li{
-    display: inline-block;
-    padding: 0.25rem;
-    font-size: 12px;
-    margin-top: 0.25rem;
-}
 
 .explore-box {
     background-color: white;
@@ -339,20 +335,6 @@ ul li{
     margin: 30px;
     font-size: 16px;
 }
-
-/* sign-in and sign-up */
-.sign-grid-main{
-  display: grid;
-  grid-template-columns: 10vw 23rem auto;
-  grid-template-rows: 20vh 30vh 40vh 10vh;
-  row-gap: 3;
-  gap: 20px;
-  background-image: url(./images/layered-waves-haikei.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-  overflow: hidden;
-}
 .accept-payment {
     margin: 25px;
     font-size: 13px;
@@ -370,6 +352,20 @@ ul li{
     color: blue;
     border: none;
     margin-left: 50px;
+}
+
+/* sign-in and sign-up */
+.sign-grid-main{
+  display: grid;
+  grid-template-columns: 10vw 23rem auto;
+  grid-template-rows: 20vh 30vh 40vh 10vh;
+  row-gap: 3;
+  gap: 20px;
+  background-image: url(./images/layered-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  overflow: hidden;
 }
 
 
