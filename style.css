@@ -17,16 +17,16 @@ html {
     scroll-behavior: smooth;
 }
 
-  body {
+body {
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-body {
-    min-height: 100vh;
-}
-
-nav{
+/* nav bar */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +35,18 @@ nav{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .logo {
     margin-right: auto;
+}
+
+.logo:hover {
+    transform: scale(105%);
+    transition: .3s;
 }
 
 .nav-links {
@@ -47,13 +57,22 @@ nav{
 
 .nav-links li {
     margin: 0 50px;
+    transition: .2s ease-in-out;
 }
+
+.nav-links li:hover, .nav-links li a:hover {
+    transform:scale(110%);
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
 
 .nav-links li a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
     font-weight: 600;
+    transition: .2s ease-in-out;
 }
 
   .sign-in-btn{
@@ -68,6 +87,12 @@ nav{
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
+    transition: .5s ease-in-out;
+}
+
+.sign-in-btn:hover, .free-btn:hover{
+    filter:hue-rotate(90deg);
+    transform: rotateY(360deg);
 }
 
   .free-btn{
@@ -79,6 +104,7 @@ nav{
     margin: 0 auto;
     border: none;
     font-size: 1rem;
+    transition: .5s ease-in-out;
 }
 
 /* hero opener for main page and how-it-works */
@@ -86,8 +112,9 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+    margin-top: 2rem;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .top-landing {
@@ -109,6 +136,11 @@ nav{
     margin-top: 1rem;
 }
 
+.signup-btn:hover, .chat-btn:hover {
+    transform: scale(93%);
+    box-shadow: 1px 1px 5px 1px black;
+}
+
 .signup-btn {
     padding: 6px;
     font-size: 16px;
@@ -116,10 +148,10 @@ nav{
     border-radius: 0.5rem;
     background-color: white;
     height: 50px;
-    width: 25%;
+    width: 10rem;
     font-weight: bold;
     color: blue;
-
+    transition: .2s ease-in-out;
 }
 
 .chat-btn {
@@ -129,9 +161,10 @@ nav{
     border-radius: 0.5rem;
     background-color: blue;
     height: 50px;
-    width: 25%;
+    width: 10rem;
     font-weight: 600;
     color: white;
+    transition: .2s ease-in-out;
 }
 
 .sign-in-paragraph {
@@ -143,7 +176,6 @@ nav{
 p a {
     font-weight: 600;
     text-decoration: none;
-
 }
 
 p a:hover {
@@ -191,12 +223,23 @@ p a:hover {
     box-shadow: 1px 1px 10px 1px gray;
     color: white;
     font-weight: 600;
+    transition: .1s ease-in-out;
+}
+
+.bubbles-all:hover {
+    transform: scale(110%);
+    transform: rotate(90deg);
 }
 
 .bubbles-all:nth-of-type(3n - 1) {
     background-color: lightgray;
+    transition: .2s ease-in-out;
 }
 
+.bubbles-all:nth-of-type(3n - 1):hover {
+    transform: scale(110%);
+    transform: rotate(180deg);
+}
 /* each bubble-border */
 .bubble-1 {
     border-top-left-radius: 50%;
@@ -246,16 +289,17 @@ p a:hover {
 
 }
 
+/* explore */
 .middle-grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-
 }
-/* explore */
+
 .explore-sec {
     text-align: center;
     margin: 5rem;
+    margin-bottom: 2rem;
 }
 
 .explore-sec h1 {
@@ -269,9 +313,37 @@ p a:hover {
     font-size: 16px;
 }
 
-.start-to-explore-boxes {
+.start-to-explore-boxes, .start-to-explore-boxes > a { 
     display: flex;
     justify-content: center;
+    color: black;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+}
+
+.start-to-explore-boxes a:hover {
+    transform: scale(120%);
+}
+/* explore-tabs */
+.start-to-explore-tab div{
+    display: none;
+    visibility: none;
+}
+
+.start-to-explore-tab div:target {
+    display: contents;
+}
+
+.explore-tabs-grid {
+    display: grid;
+    grid-template-columns: 30rem;
+    grid-template-rows: auto;
+    max-width: fit-content;
+    margin: 30px auto 0 auto;
+    border-radius: 20px;
+    padding: 30px;
+    padding-right: 60px;
+    text-align: left;
 }
 
 /* explore-box */
@@ -303,7 +375,6 @@ p a:hover {
     justify-content: center;
     align-items: center;
     padding: 10px;
-
 }
 
 .accept-payment-card {
@@ -348,7 +419,13 @@ p a:hover {
     color: blue;
     border: none;
     margin-left: 50px;
+    transition: .1s ease-in-out;
 }
+
+.learn-more-btn:hover , .solutions-learn-more-btn:hover{
+    transform: scale(110%);
+}
+
 /* solutions */
 .solutions-header {
     margin-top: 100px;
@@ -360,7 +437,6 @@ p a:hover {
 
 .solutions-circle-content {
     display: inline-block;
-    position: relative;
     text-align: center;
     align-self: center;
     align-items: center;
@@ -369,6 +445,7 @@ p a:hover {
 
 .bottom-sec {
     text-align: center;
+    
 }
 
 .solutions-circle {
@@ -395,6 +472,7 @@ p a:hover {
     color: blue;
     border: 2px solid blue;
     margin-top: 20px;
+    transition: .1s ease-in-out;
 }
 
 /* sign-in and sign-up */
