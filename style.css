@@ -306,6 +306,22 @@ p a:hover {
     font-size: 16px;
 }
 
+.sign-grid {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: var(--box-color);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: var(--text-box-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sign-grid-form {
+  margin-top: 12px;
+  text-align: center;
+  position: relative;
+}
 
 .accept-payment{
     margin: 25px;
