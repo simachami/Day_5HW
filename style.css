@@ -18,12 +18,16 @@ html {
     scroll-behavior: smooth;
 }
 
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
 body {
     min-height: 100vh;
 }
 
-
-nav {
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +57,7 @@ nav {
     font-weight: 600;
 }
 
-
-.sign-in-btn {
+  .sign-in-btn{
     background-color: white;
     text-align: center;
     font-size: 1rem;
@@ -66,10 +69,9 @@ nav {
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
-
 }
 
-.free-btn {
+  .free-btn{
     background-color: blue;
     color: white;
     font-weight: 600;
@@ -80,7 +82,8 @@ nav {
     font-size: 1rem;
 }
 
-.grid-container {
+/* hero opener for main page and how-it-works */
+.grid-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -88,11 +91,8 @@ nav {
     margin-top: 20px;
 }
 
-
-
 .top-landing {
-    padding: 50px;
-
+    padding:50px;
 }
 
 .top-landing h1 {
@@ -239,8 +239,6 @@ p a:hover {
     border-bottom-right-radius: 50%;
 }
 
-
-
 .lil-border {
     border: 2px solid lightgray;
     align-items: center;
@@ -275,6 +273,14 @@ p a:hover {
 .start-to-explore-boxes {
     display: flex;
     justify-content: center;
+
+}
+
+ul li{
+    display: inline-block;
+    padding: 0.25rem;
+    font-size: 12px;
+    margin-top: 0.25rem;
 }
 
 .explore-box {
@@ -286,7 +292,7 @@ p a:hover {
     margin-right: 40px;
     border: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .explore-box p {
@@ -315,7 +321,6 @@ p a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     height: 500px;
-
 }
 
 .accept-payment-box img {
@@ -335,24 +340,19 @@ p a:hover {
     font-size: 16px;
 }
 
-.sign-grid {
-    grid-column: 2;
-    grid-row: 2;
-    background-color: var(--box-color);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    color: var(--text-box-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+/* sign-in and sign-up */
+.sign-grid-main{
+  display: grid;
+  grid-template-columns: 10vw 23rem auto;
+  grid-template-rows: 20vh 30vh 40vh 10vh;
+  row-gap: 3;
+  gap: 20px;
+  background-image: url(./images/layered-waves-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  overflow: hidden;
 }
-
-.sign-grid-form {
-    margin-top: 12px;
-    text-align: center;
-    position: relative;
-}
-
 .accept-payment {
     margin: 25px;
     font-size: 13px;
@@ -451,6 +451,115 @@ footer h3{
     font-weight: 600;
 } */
 
+.sign-header-logo {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+  max-height: max-content ;
+  
+}
+
+.sign-img {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center ;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  transform: translateY(10%);
+}
+
+.sign-grid {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: var(--box-color);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: var(--text-box-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sign-grid-form {
+  margin-top: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.sign-label-input {
+  text-align: left;
+  text-indent: 35px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  padding: 6px 0;
+  width: 70%;
+  border-radius: 10px;
+  background-color: rgb(221, 221, 221);
+  border-width: 0;
+}
+
+.sign-button {
+  margin-top: 1.4rem;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: black;
+  font-weight: 600;
+  font-size: medium;
+  background-color: white;
+}
+
+.sign-button:hover {
+  filter: invert(100%);
+  transition: .3s;
+}
+
+.sign-input-icon {
+  position: absolute;
+  margin-left: 10px ;
+  transform: translateY(15px);
+}
+
+.sign-alt {
+  margin: 0 auto;
+}
+
+.sign-alt a, .sign-grid-form a {
+  text-decoration: none;
+  color: red;
+}
+
+.sign-in-btn a {
+  text-decoration: none;
+}
+
+.sign-alt-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 14px;
+}
+
+.sign-alt-icons > a {
+  margin-top: 0px;
+  background-color: lightgrey;
+  width: 20px;
+  padding: 10px 20px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+.sign-alt-icons > a:hover {
+  background-color: white;
+  box-shadow: 0px 0px 2px 1px black;
+  transition: .3s ease-in-out;
+}
+
 
 /* footer */
 .footer {
@@ -463,18 +572,18 @@ footer h3{
 }
 
 .footer-1 {
-    grid-column: 2;
-    font-size: small;
-    margin-top: 1rem;
+  grid-column: 2;
+  font-size: small;
+  margin-top: 1rem;
 }
 
-.footer-1>p {
-    padding-top: 2rem;
+.footer-1 > p {
+  padding-top: 2rem;
 }
 
 .footer-2 {
-    grid-column: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
