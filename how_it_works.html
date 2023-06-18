@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How_it_works</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <!-- nav-bar: import from index -->
     <nav>
-
+        <div class="logo">
+            <img src="./images/logo .png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="">Home</a></li>
+            <li><a href="#" class="">Features</a></li>
+            <li><a href="#" class="">Pricing</a></li>
+            <li><a href="#" class="">How it Works</a></li>
+            <li><a href="#" class="">Support</a></li>
+        </ul>
+        <div class="nav-btns">
+            <button class="sign-in-btn">Sign In</button>
+            <button class="free-btn">Try it Free</button>
+        </div>
     </nav>
 
     <!-- import from main? add  maybe some different text but keep background image -->
@@ -19,26 +34,145 @@
     </header>
 
     <!-- Body for 'How it Works' section. flexbox row -->
-    <main>
+    <main class="grid-container">
+        <article class="top-landing">
+            <h1>Focus on<br> Your Business</h1>
+            <h4>Let us handle everything else</h4>
+            <p>Subscribtion billing, powered with revenue retention tools <br> and a seamless customer experience -
+                without the technical hurdles.</p>
+            <div class="focus-btns">
+                <button class="signup-btn">Sign up Free <img src="./images/arrows-right.svg" /></button>
+                <button class="chat-btn">Chat with us <img src="./images/chat-bubble.svg" /></button>
+                <p class="sign-in-paragraph">Already using DoubleTap? <a href="">Sign in</a></p>
+                <div class="">
+                    <ul class="trial-bullet-pt">
+                        <li>Free 14 day trial</li>
+                        <li>Manage customers in minutes</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
 
+        <!-- Aside bubbles -->
+        <aside class="aside-bubbles">
+            <div class="bubbles-all bubble-1">
+                <img src="./images/dashboard.svg" alt="">
+                <p>Client Dashboard</p>
+            </div>
+            <div class="bubbles-all bubble-2">
+                <img src="./images/userr.svg" alt="">
+                <p>Profiles</p>
+            </div>
+            <div class="bubbles-all bubble-3">
+                <img src="./images/calendar.svg" alt="">
+                <p>Scheduling</p>
+            </div>
+            <div class="bubbles-all bubble-4">
+                <img src="./images/barchart.svg" alt="">
+                <p>Analytics</p>
+            </div>
+            <div class="bubbles-all bubble-5">
+                <img src="./images/comment-bubbles.svg" alt="">
+                <p>Comments</p>
+            </div>
+            <div class="bubbles-all bubble-6">
+                <img src="./images/file-folder.svg" alt="">
+                <p>File Management</p>
+            </div>
+            <div class="bubbles-all bubble-7">
+                <img src="./images/stopwatch.svg" alt="">
+                <p>Time Tracking</p>
+            </div>
+            <div class="bubbles-all bubble-8">
+                <img src="./images/mail2.svg" alt="">
+                <p>Analytics</p>
+            </div>
+            <div class="bubbles-all bubble-9">
+                <img src="./images/alert-bell.svg" alt="">
+                <p>Project Alerts</p>
+            </div>
+        </aside>
     </main>
 
-    <!-- article containing 'Solutions to fit your business needs'
-    as well as the following four buttons 'email bashborads, task management
-    User Analytics, Project Calendars' -->
-    <article>
+    <p class="lil-border"></p>
 
-    </article>
 
     <!-- Flexbox column/'Try DoubleTap Today' and 'get started' 'chat with us' buttons / footnotes-->
-    <article>
+    <section class="middle-grid">
+        <article class="explore-sec">
+            <h1>How It Works</h1>
+            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Quos aspernatur minus possimus delectus
+                quisquam? Sed. <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Delectus nisi
+                consequatur inventore quo. Recusandae, asperiores?
+            </p>
+        </article>
 
-    </article>
+        <article class="accept-payment-box">
+            <img src="./images/card-2.png" alt="" />
+            <div class="accept-payment-card">
+                <h1>Start accepting payments with ease</h1>
+                <p>Deliver the world of payment options and seamless<br>checkout experiences, making it easy for your
+                    customers to <br> pay you for your products and services</p>
+                <ul class="accept-payment-list">
+                    <li class="accept-payment">Process transations in up to 32 different currencies</li>
+                    <li class="accept-payment">Integrate with popular payment gateways like Stripe <br> and Braintree
+                    </li>
+                    <li class="accept-payment">Accept credit & debit cards, Paypal, ACH, Apple Pay, <br> and more with
+                        swipe of a finger</li>
+                    <li class="accept-payment">Select from a variety of different checkout options <br> and experiences
+                    </li>
+                </ul>
+                <button class="learn-more-btn">Learn more</button>
+            </div>
+        </article>
+    </section>
+
+
+    <section class="middle-grid">
+        <article class="explore-sec">
+            <h1>How It Works</h1>
+            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Quos aspernatur minus possimus delectus
+                quisquam? Sed. <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Delectus nisi
+                consequatur inventore quo. Recusandae, asperiores?
+            </p>
+        </article>
+
+        <article class="accept-payment-box">
+            <img src="./images/card-3.png" alt="" />
+            <div class="accept-payment-card">
+                <h1>Start accepting payments with ease</h1>
+                <p>Deliver the world of payment options and seamless<br>checkout experiences, making it easy for your
+                    customers to <br> pay you for your products and services</p>
+                <ul class="accept-payment-list">
+                    <li class="accept-payment">Process transations in up to 32 different currencies</li>
+                    <li class="accept-payment">Integrate with popular payment gateways like Stripe <br> and Braintree
+                    </li>
+                    <li class="accept-payment">Accept credit & debit cards, Paypal, ACH, Apple Pay, <br> and more with
+                        swipe of a finger</li>
+                    <li class="accept-payment">Select from a variety of different checkout options <br> and experiences
+                    </li>
+                </ul>
+                <button class="learn-more-btn">Learn more</button>
+            </div>
+        </article>
+    </section>
 
     <!-- import: footer / copyright etc. -->
     <footer>
+        <footer class="footer">
+            <div class="footer-1">
+                <p>DoubleTap &COPY;</p>
+                <p>All rights reserved</p>
+                <p>written by Sima Chami and Benjamin Copen</p>
+            </div>
+            <div class="footer-2">
+                <p><a href="./index.html">Home</a></p>
+                <p><a href="./how_it_works.html">How it works</a></p>
+                <p><a href="sign_up.html">Sign up</a></p>
+                <p><a href="">Contact Us</a></p>
+            </div>
+        </footer>
 
-    </footer>
-
-</body>
+    </body>
 </html>
