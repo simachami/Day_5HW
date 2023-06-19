@@ -729,3 +729,7 @@ p a:hover {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.footer-2 a{
+    color: white;
+}
