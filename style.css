@@ -69,6 +69,7 @@ nav {
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
+    margin-right: 10px;
 }
 
 .free-btn {
@@ -249,12 +250,12 @@ p a:hover {
 
 }
 
-.middle-grid {
+/* .middle-grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
 
-}
+} */
 
 
 
@@ -315,12 +316,12 @@ p a:hover {
 
 /* How-it-works payment box section */
 
-.how-it-works-middle-grid{
+/* .how-it-works-middle-grid{
     display: grid;
     grid-template-rows: repeat(1, 1fr);
     gap: 10px;
 
-}
+} */
 
 .how-it-works-accept-box {
     display: flex;
@@ -367,8 +368,8 @@ p a:hover {
 
 
 .accept-payment-card {
-    background-color: rgba(8, 8, 252, 0.835);
-    color: white;
+    /* background-color: rgba(8, 8, 252, 0.835); */
+    color: black;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     height: 500px;
