@@ -5,10 +5,20 @@
 }
 
 :root {
-    --box-color: rgba(74, 9, 87, 0.767);
-    --text-box-color: white;
-    --translucent-color: rgba(255, 255, 255, 0.39);
-    /* some color values  1d574a FA7268 3a1b6a*/
+    --sky-blue: #5eb1ec;
+    --light-blue: #46aaf0;
+    --mid-blue: #3f9ef6;
+    --mid-periwinkle: #4b90f8;
+    --light-purple: #6280f6;
+    --soft-purple: #7d6cef;
+    /* Background colors: 
+    #5eb1ec
+    #46aaf0
+    #3f9ef6
+    #4b90f8
+    #6280f6
+    #7d6cef
+    */
 }
 
 html {
@@ -21,10 +31,14 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     /* background-color: #B2DDF7; */
+}
+
+.background-img {
     background-image: url(./images/layered-waves-haikei\ \(1\).svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 /* nav bar */
@@ -50,7 +64,7 @@ a {
 }
 
 .logo:hover {
-    transform: scale(105%);
+    transform: scale(110%);
     transition: .3s;
 }
 
@@ -67,8 +81,8 @@ a {
 
 .nav-links li:hover, .nav-links li a:hover {
     transform:scale(110%);
-    color: white;
-    text-shadow: 2px 2px 3px black;
+    color: black;
+    text-shadow: 2px 2px 3px lightgrey;
 }
 
 
@@ -86,8 +100,7 @@ a {
     font-size: 1rem;
     padding: 0.5rem 1.25rem 0.5rem 1.25rem;
     margin: 0 auto;
-    color: blue;
-    border-color: blue;
+    border-color: var(--mid-blue);
     border-radius: 0.5rem;
     cursor: pointer;
     font-weight: bold;
@@ -102,13 +115,13 @@ a {
 }
 
 .free-btn {
-    background-color: blue;
+    background-color: var(--soft-purple);
     color: white;
     font-weight: 600;
     border-radius: 0.5rem;
     padding: 0.5rem 1.25rem 0.5rem 1.25rem;
     margin: 0 auto;
-    border: none;
+    border-color: var(--soft-purple);
     font-size: 1rem;
     transition: .5s ease-in-out;
 }
@@ -119,8 +132,10 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     justify-items: center;
-    margin-top: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.8rem;
     gap: 10px;
+    background-color: white;
 }
 
 .top-landing {
@@ -130,12 +145,17 @@ a {
 .top-landing h1 {
     font-size: 44px;
     letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 .top-landing h4 {
     font-size: 20px;
     font-weight: 500;
     line-height: 2;
+}
+
+.top-landing p {
+    font-weight: 400;
 }
 
 .focus-btns {
@@ -150,27 +170,31 @@ a {
 .signup-btn {
     padding: 6px;
     font-size: 16px;
-    border: 2px solid blue;
+    border: 2px solid var(--mid-blue);
     border-radius: 0.5rem;
     background-color: white;
     height: 50px;
     width: 10rem;
     font-weight: bold;
-    color: blue;
+    color: black;
     transition: .2s ease-in-out;
 }
 
 .chat-btn {
     padding: 6px;
     font-size: 16px;
-    border: 2px solid blue;
+    border: 2px solid var(--soft-purple);
     border-radius: 0.5rem;
-    background-color: blue;
+    background-color: var(--soft-purple);
     height: 50px;
     width: 10rem;
     font-weight: 600;
     color: white;
     transition: .2s ease-in-out;
+}
+
+.focus-btn-icon {
+    transform: translate(3px, 3px);
 }
 
 .sign-in-paragraph {
@@ -190,7 +214,7 @@ p a:hover {
 
 .trial-bullet-pt {
     list-style: none;
-    margin-top: 0.5rem;
+    margin-top: 0.9rem;
 }
 
 .trial-bullet-pt li {
@@ -198,6 +222,7 @@ p a:hover {
     padding: 0.25rem;
     font-size: 12px;
     margin-top: 0.25rem;
+    font-weight: 500;
 }
 
 .trial-bullet-pt li:first-of-type {
@@ -206,7 +231,7 @@ p a:hover {
 
 .trial-bullet-pt li::before {
     content: "\2022";
-    color: blue;
+    color: var(--soft-purple);
     font-size: 12px;
     font-weight: bold;
     width: 1em;
@@ -221,7 +246,7 @@ p a:hover {
 }
 
 .bubbles-all {
-    background-color: blue;
+    background-color: var(--mid-blue);
     width: 100%;
     height: 100%;
     text-align: center;
@@ -239,7 +264,7 @@ p a:hover {
 
 .bubbles-all:nth-of-type(3n - 1) {
 
-    background-color: #0096ff;
+    background-color: var(--soft-purple);
     transition: .2s ease-in-out;
 }
 
@@ -293,7 +318,7 @@ p a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 300px 0 300px;
+    margin: 2px 300px 0 300px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
 }
@@ -316,7 +341,9 @@ p a:hover {
 .explore-sec h1 {
     font-weight: 500;
     word-spacing: 2px;
-    font-size: 30px;
+    font-size: xxx-large;
+    color: white;
+    text-shadow: 0px 4px 3px black;
 }
 
 
@@ -344,6 +371,14 @@ p a:hover {
 
 .start-to-explore-tab div:target {
     display: contents;
+}
+.start-to-explore-tab h3{
+    color: white;
+    text-shadow: -2px 2px 3px black;
+    font-size: xx-large;
+}
+.middle-grid p {
+    font-weight: 500;
 }
 
 .explore-tabs-grid {
@@ -390,20 +425,20 @@ p a:hover {
 }
 
 /* How-it-works payment box section */
-
-/* .how-it-works-middle-grid{
+.how-it-works-middle-grid{
     display: grid;
     grid-template-rows: repeat(1, 1fr);
     gap: 10px;
+    font-weight: 500;
+}
 
-} */
 
 .how-it-works-accept-box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-
+    font-weight: 500;
 }
 .how-it-works-accept-box:last-of-type {
     display: flex;
@@ -423,11 +458,11 @@ p a:hover {
 }
 
 .how-it-works-payment-card {
-    color: black;
+    color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     height: 500px;
-
+    background-color: var(--soft-purple);
 }
 
 .how-it-works-payment-card h1{
@@ -443,7 +478,8 @@ p a:hover {
 
 
 .accept-payment-card {
-    /* background-color: rgba(8, 8, 252, 0.835); */
+
+    background-color: rgba(8, 8, 252, 0.835); 
     color: black;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -481,7 +517,6 @@ p a:hover {
     height: 50px;
     width: 200px;
     font-weight: 600;
-    color: blue;
     border: none;
     margin-left: 50px;
     transition: .1s ease-in-out;
@@ -495,9 +530,11 @@ p a:hover {
 .solutions-header {
     margin-top: 100px;
     text-align: center;
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 50px;
     word-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
 }
 
 .solutions-circle-content {
@@ -510,7 +547,7 @@ p a:hover {
 
 .bottom-sec {
     text-align: center;
-    
+    padding-bottom: 9rem;
 }
 
 .solutions-circle {
@@ -520,7 +557,8 @@ p a:hover {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: var(--mid-periwinkle);
+    box-shadow: 1px 1px 5px black;
     color: white;
     margin-left: 100px;
     margin-bottom: 20px;
@@ -534,8 +572,8 @@ p a:hover {
     height: 50px;
     width: 200px;
     font-weight: 600;
-    color: blue;
-    border: 2px solid blue;
+    color: var(--mid-periwinkle);
+    border: 2px solid var(--mid-periwinkle);
     margin-top: 20px;
     transition: .1s ease-in-out;
 }
@@ -544,10 +582,10 @@ p a:hover {
 .sign-grid-main {
     display: grid;
     grid-template-columns: 10vw 23rem auto;
-    grid-template-rows: 20vh 30vh 40vh 10vh;
+    grid-template-rows: 20vh 30vh 25rem 10vh;
     row-gap: 3;
     gap: 20px;
-    background-image: url(./images/layered-waves-haikei.svg);
+    background-image: url(./images/layered-waves-haikei\ \(3\).svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;
@@ -575,7 +613,7 @@ p a:hover {
 }
 
 .sign-header>h1 {
-    text-shadow: -3px 6px black;
+    text-shadow: -.25rem .25rem black;
     margin-bottom: 20px;
 }
 
@@ -591,7 +629,7 @@ p a:hover {
 .sign-grid {
     grid-column: 2;
     grid-row: 3;
-    background-color: var(--box-color);
+    background-color: var(--light-blue);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: var(--text-box-color);
@@ -604,6 +642,7 @@ p a:hover {
     margin-top: 12px;
     text-align: center;
     position: relative;
+    color: white;
 }
 
 .sign-label-input {
@@ -615,7 +654,8 @@ p a:hover {
     padding: 6px 0;
     width: 70%;
     border-radius: 10px;
-    background-color: rgb(221, 221, 221);
+    background-color: white
+    ;
     border-width: 0;
 }
 
@@ -643,12 +683,17 @@ p a:hover {
 
 .sign-alt {
     margin: 0 auto;
+    color: white;
 }
 
 .sign-alt a,
 .sign-grid-form a {
+    letter-spacing: .1px;
+    word-spacing: .01rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 3px black;
     text-decoration: none;
-    color: red;
+    color: white;
 }
 
 .sign-in-btn a {
@@ -663,18 +708,19 @@ p a:hover {
 
 .sign-alt-icons>a {
     margin-top: 0px;
-    background-color: lightgrey;
+    background-color: white;
     width: 20px;
     padding: 10px 20px;
     border: 1px solid grey;
     border-radius: 50%;
+    transition: .2s ease-in-out;
 }
 
 .sign-alt-icons>a:hover {
-    background-color: white;
+    transform: scale(93%);
     box-shadow: 0px 0px 2px 1px black;
-    transition: .3s ease-in-out;
 }
+
 
 /* footer-get-started */
 .footer-get-started {
@@ -705,18 +751,20 @@ p a:hover {
 
 /* footer */
 .footer {
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     display: grid;
     grid-template-columns: 60vw 20vw 20vw;
     grid-template-rows: 250px;
-    background-color: rgb(29, 6, 54);
+    background-color: var(--soft-purple);
     color: white;
+    bottom: 0;
 }
 
 .footer-1 {
     grid-column: 2;
     font-size: small;
     margin-top: 1rem;
+
 }
 
 .footer-1>p {
@@ -732,4 +780,50 @@ p a:hover {
 
 .footer-2 a{
     color: white;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .sign-grid-main {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 8rem 10rem 30rem auto;
+    }
+    .sign-header {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        grid-column: 2;
+        grid-row: 1;
+        font-size: large;
+        max-width: fit-content;
+        margin: 0 auto;
+    }
+    .sign-header-logo {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 25rem;
+        margin: 0 auto;
+        transform: translateY(20%);
+    }
+    .sign-grid {
+        grid-column: 2;
+        grid-row: 3;
+        width: 25rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sign-img {
+        display: none;
+        max-width: 25rem;
+    }
+    .footer {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
 }
