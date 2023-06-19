@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="sticky-nav">
         <div class="logo">
-            <img src="./images/logo .png" alt="Logo" />
+            <a href="./index.html"><img src="./images/logo .png" alt="Logo" /></a>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="">Home</a></li>
-            <li><a href="#" class="">Features</a></li>
-            <li><a href="#" class="">Pricing</a></li>
-            <li><a href="#" class="">How it Works</a></li>
-            <li><a href="#" class="">Support</a></li>
+          <li><a href="#" class="">Home</a></li>
+          <li><a href="#" class="">Features</a></li>
+          <li><a href="#" class="">Pricing</a></li>
+          <li><a href="./how_it_works.html" class="">How it Works</a></li>
+          <li><a href="#" class="">Support</a></li>
         </ul>
         <div class="nav-btns">
             <button class="sign-in-btn"><a href="./sign_in.html">Sign In</a></button>
@@ -36,7 +36,7 @@
             <div class="focus-btns">
                 <button class="signup-btn">Sign up Free <img src="./images/arrows-right.svg" /></button>
                 <button class="chat-btn">Chat with us <img src="./images/chat-bubble.svg" /></button>
-                <p class="sign-in-paragraph">Already using DoubleTap? <a href="">Sign in</a></p>
+                <p class="sign-in-paragraph">Already using DoubleTap? <a href="./sign_in.html">Sign in</a></p>
                 <div class="">
                     <ul class="trial-bullet-pt">
                         <li>Free 14 day trial</li>
@@ -86,7 +86,6 @@
             </div>
 
         </aside>
-
     </main>
     <div class="lil-border"></div>
 
@@ -97,45 +96,71 @@
                     base, payments, and keep track of internal tasks.</p>
 
                 <div class="start-to-explore-boxes">
-                    <div class="explore-box"><img src="./images/bitcoin.svg" />
-                        <p>Payments</p>
-                    </div>
-                    <div class="explore-box"><img src="./images/retention.svg" />
-                        <p>Retention</p>
-                    </div>
-                    <div class="explore-box"><img src="./images/dot-chart.svg" />
-                        <p>Reporting</p>
-                    </div>
-                    <div class="explore-box"><img src="./images/conversions.svg" />
-                        <p>Conversions</p>
-                    </div>
+                <a href="#payment-tab">
+                <div class="explore-box"><img src="./images/bitcoin.svg" />
+                    <p>Payments</p>
                 </div>
-            </article>
-
-            <article class="accept-payment-box">
-                <img src="./images/credit-card.png" alt="" />
-                <div class="accept-payment-card">
-                    <h1>Start accepting payments with ease</h1>
-                    <p>Deliver the world of payment options and seamless<br>checkout experiences, making it easy for
-                        your
-                        customers to <br> pay you for your products and services</p>
-                    <ul class="accept-payment-list">
-                        <li class="accept-payment">Process transations in up to 32 different currencies</li>
-                        <li class="accept-payment">Integrate with popular payment gateways like Stripe <br> and
-                            Braintree
-                        </li>
-                        <li class="accept-payment">Accept credit & debit cards, Paypal, ACH, Apple Pay, <br> and more
-                            with
-                            swipe of a finger</li>
-                        <li class="accept-payment">Select from a variety of different checkout options <br> and
-                            experiences
-                        </li>
-                    </ul>
-                    <button class="learn-more-btn">Learn more</button>
+              </a>
+                <a href="#retention-tab">
+                <div class="explore-box"><img src="./images/retention.svg" />
+                    <p>Retention</p>
                 </div>
-            </article>
-        </section>
-
+                </a>
+                <a href="#reporting-tab">
+                <div class="explore-box"><img src="./images/dot-chart.svg" />
+                    <p>Reporting</p>
+                </div>
+                </a>
+                <a href="#conversions-tab">
+                <div class="explore-box"><img src="./images/conversions.svg" />
+                    <p>Conversions</p>
+                </div>
+                </a>
+            </div>
+            <div class="start-to-explore-tab explore-tabs-grid">
+              
+              <div class="tab-display" id="payment-tab">
+                <h3>Make payments to us</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                   Saepe voluptas ducimus iure, deleniti odio voluptatum est nulla ab cumque corporis.</p>
+              </div>
+              <div class="tab-display" id="retention-tab">
+                <h3>retain some of your money</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div id="reporting-tab" class="tab-display">
+                <h3>We'll give you some reports</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quod sapiente fugiat aspernatur pariatur, 
+                  illo ratione perspiciatis dolore vitae saepe dignissimos? Ducimus eius, saepe harum fugiat itaque quam 
+                  veritatis quis esse natus, dolores possimus, assumenda sequi velit quidem 
+                  dicta voluptate.</p>
+              </div>
+              <div id="conversions-tab" class="tab-display">
+                <h3>We'll convert your money</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </article>
+    
+        <article class="accept-payment-box">
+            <img src="./images/credit-card.png" alt="" />
+            <div class="accept-payment-card">
+                <h1>Start accepting payments with ease</h1>
+                <p>Deliver the world of payment options and seamless<br>checkout experiences, making it easy for your
+                    customers to <br> pay you for your products and services</p>
+                <ul class="accept-payment-list">
+                    <li class="accept-payment">Process transations in up to 32 different currencies</li>
+                    <li class="accept-payment">Integrate with popular payment gateways like Stripe <br> and Braintree
+                    </li>
+                    <li class="accept-payment">Accept credit & debit cards, Paypal, ACH, Apple Pay, <br> and more with
+                        swipe of a finger</li>
+                    <li class="accept-payment">Select from a variety of different checkout options <br> and experiences
+                    </li>
+                </ul>
+                <button class="learn-more-btn"><a href="./how_it_works.html">Learn more</a></button>
+            </div>
+        </article>
+    </section>
 
         <section class="bottom-sec">
             <h1 class="solutions-header">Solutions to fit your business needs</h1>
